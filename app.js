@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
     res.render('home')
 });
 
-app.get('/campground', async (req, res) => {
+app.get('/campgrounds', async (req, res) => {
     const campgrounds = await Campground.find({});
     res.render('campgrounds/index', { campgrounds })
 });
